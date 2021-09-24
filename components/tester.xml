@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Tester" extends="Scene">
+	<children>
+      <Label id="testLabel"
+      	text="Testing..."
+      	width="1280" 
+      	height="720" 
+      	horizAlign="center"
+      	vertAlign="center"
+      	/>
+    </children>
+
+<script type="text/brightscript" >
+<![CDATA[
+  function init()
+    m.top.setFocus(true)
+    m.testLabel = m.top.findNode("testLabel")
+    
+    ' set the font size
+    m.testLabel.font.size = 92
+
+    ' set the color to light blue
+    m.testLabel.color = "0x72D7EEFF"
+  end function
+]]>
+</script>
+
+</component>
