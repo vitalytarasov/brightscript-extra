@@ -1,5 +1,4 @@
 .DEFAULT_GOAL := run
-UNAME_S := $(shell uname -s)
 
 clean:
 	rm -f channel.zip
