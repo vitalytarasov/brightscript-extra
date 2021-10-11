@@ -22,12 +22,15 @@ function TestBsxToString() as boolean
     if not _TestBsxToString(-214748364, "-214748364") then return false
 
     ' invalid, uninitialized
-    if not _TestBsxToString(invalid, "") then return false
-    if not _TestBsxToString(missing, "") then return false
+    if not _TestBsxToString(invalid, "invalid") then return false
+    if not _TestBsxToString(missing, "uninitialized") then return false
 
     ' long integer
     if not _TestBsxToString(9223372036854775807&, "9223372036854775807") then return false
     if not _TestBsxToString(-9223372036854775808&, "-9223372036854775808") then return false
+
+    ' node (unhandled)
+    if not _TestBsxToString(CreateObject("roUrlTransfer"), "") then return false
 
     ' string
     if not _TestBsxToString("banana", "banana") then return false
