@@ -1,21 +1,22 @@
-# brightscript-extra, a.k.a. BSX library
-## string functions
-### BsxToString(value) string
-converts simple types to strings
+# BrightScript Extra library, a.k.a. BSX
+a collection of utility functions for Roku client development
+
+## convert
+data type conversion
+### function convertToString(value as dynamic) as string
+converts singular data types (e.g. Integer, Float, DateTime) to a string  
+prints a warning and returns an empty string if type is not singular
 #### examples
 ```brightscript
-' convert boolean, prints "result is false"
-val = 1 > 2
-print "result is " + BsxToString(val)
-```
-```brightscript
-' convert interger, prints "count is 43"
-count = 43
-print "count is " + BsxToString(count)
-```
+' convert a boolean to string
+value = 1 > 2
+print convertToString(value) ' prints "false"
 
-```brightscript
-' convert date time to ISO 8601, prints "now is 2023-10-20T01:02:03Z"
+' convert a float to string
+calc = 43 * 1.1
+print convertToString(calc) ' prints "47.3"
+
+' convert DateTime to ISO 8601 string
 now = CreateObject("roDateTime")
-print "now is " + BsxToString(now)
+print convertToString(now) ' prints "2021-02-03T04:05:06Z"
 ```

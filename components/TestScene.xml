@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="Tester" extends="Scene">
+<component name="TestScene" extends="Scene">
+
     <children>
         <Label id = "Title"
-            text = "Executing Unit Tests"
+            text = "Executing Tests"
             font = "font:MediumBoldSystemFont"
             color = "0x00FFFFFF"
             width = "1280"
@@ -12,13 +13,11 @@
         />
     </children>
 
-	<script type="text/brightscript">
-		<![CDATA[
-		  function init()
-			m.top.setFocus(true)
-			m.top.findNode("Title").font.size = 92
-		  end function
-		]]>
-	</script>
+    <interface>
+        <function name="runTests"/>
+    </interface>
+
+    <script type="text/brightscript" uri="TestScene.brs"/>
+    <script type="text/brightscript" uri="pkg:/components/BSX/convert.brs"/>
 
 </component>
