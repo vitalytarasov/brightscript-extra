@@ -20,3 +20,15 @@ print convertToString(calc) ' prints "47.3"
 now = CreateObject("roDateTime")
 print convertToString(now) ' prints "2021-02-03T04:05:06Z"
 ```
+
+## usage
+- copy the `BSX` directory into your project `components`
+- add a file with the desired functions to your node:
+```brightscript
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyScene" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/BSX/convert.brs"/>
+    ...
+</component>
+```
+ 
