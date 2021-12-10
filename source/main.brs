@@ -3,7 +3,7 @@ sub main()
     m.port = CreateObject("roMessagePort")
     screen.setMessagePort(m.port)
 
-    ' create and run Tester node
+    ' create and run the tester node
     tester = screen.CreateScene("TestScene")
     screen.show()
     tester.callFunc("runTests")

@@ -18,6 +18,6 @@
     </interface>
 
     <script type="text/brightscript" uri="TestScene.brs"/>
-    <script type="text/brightscript" uri="pkg:/components/BSX/convert.brs"/>
+    <script type="text/brightscript" uri="pkg:/source/BSX/convert.brs"/>
 
 </component>
